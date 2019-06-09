@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build TP1",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "-o",
+        "tp1",
+        "tp1/main.c",
+        "Models.o",
+        "DataHandlers.o",
+        "tp1.o"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build TP1 ModelsLib",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-c",
+        "tp1/src/models/Models.c"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build TP1 DataHandlersLib",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-c",
+        "tp1/src/utility/DataHandlers.c"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build TP1 MainLib",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-c",
+        "tp1/src/tp1.c"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
