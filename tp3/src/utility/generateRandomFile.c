@@ -92,15 +92,16 @@ int main(int argc, char *argv[]) {
       // Random number of cycles
       int maxEdges = (numberOfVertexes * (numberOfVertexes - 1)) / 2;
       numberOfCycleEdges = rand() % (maxEdges - numberOfEdges) + 1;
-
+	
       // Replace the first line
       fprintf(fp, "%d %d\n", numberOfVertexes, numberOfEdges + numberOfCycleEdges);
 
       // Back to the end of the file
       fseek(fp, 0, SEEK_END);
+      fseek(fp, 0, SEEK_END);
       for (index = 0; index < numberOfCycleEdges; index++) {
         // Search non existing edges
-        int aindex, chosenA, chosenB;
+        int aindex, chosenA = -1, chosenB = -1;
         for (aindex = 0; aindex < numberOfVertexes; aindex++) {
           for (jindex = 0; jindex < numberOfVertexes; jindex++) {
             if (aindex != jindex && adjMatrix[aindex][jindex] == 0) {
