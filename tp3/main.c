@@ -13,7 +13,6 @@ int main(int argc, char *argv[]) {
   } else {
     task = argv[1];
     graphFile = argv[2];
-
     startTP3(graphFile, task);
   }
   return 0;

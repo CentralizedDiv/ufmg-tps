@@ -15,7 +15,7 @@ int optimalVertexCover(Graph *graph, int currentVertex, bool isFlagged, int isFl
   // Se o vértice não tiver arestas
   if (graph->vertexes[currentVertex].edges == NULL) {
     return isFlagged;
-  } else if (isFlaggedMap[currentVertex][isFlagged] != -1) { // Se já tivermos o valorpara este vértice
+  } else if (isFlaggedMap[currentVertex][isFlagged] != -1) { // Se já tivermos o valor para este vértice
     return isFlaggedMap[currentVertex][isFlagged];
   }
 
